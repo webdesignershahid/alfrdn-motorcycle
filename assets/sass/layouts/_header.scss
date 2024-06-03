@@ -1,0 +1,15 @@
+header {
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: $color__white;
+    transition: all .25s;
+    
+    &.sticky {
+        box-shadow: 0 0 1rem 0 rgba($color__black, .1);
+    }
+}
