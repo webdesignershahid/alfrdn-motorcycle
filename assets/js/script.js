@@ -94,6 +94,28 @@
                 //     prevEl: ".heroSlider .button-prev",
                 // },
             });
+            // Homepage Signup Side Slider
+            let bike_slider = new Swiper('.bike_slider', {
+                spaceBetween: 30,
+                slidesPerView: 1,
+                loop: 1,
+                speed: 1000,
+                autoplay: {
+                    delay: 2000,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                    },
+                },
+                // navigation: {
+                //     nextEl: ".heroSlider .button-next",
+                //     prevEl: ".heroSlider .button-prev",
+                // },
+            });
             
         },
 

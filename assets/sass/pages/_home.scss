@@ -10,3 +10,47 @@
 .brands {
     padding: 3rem 0;
 }
+
+.bikes_display {
+    padding: 6rem 0;
+    background-color: #f7f6f5;
+
+    .swiper-wrapper {
+        padding-top: 3rem;
+    }
+    .bike_item {
+        background-color: $color__white;
+        border-radius: 1rem;
+        &.threeD {
+            .image {
+                img {
+                    margin-top: -3rem;
+                    transition: all .25s ease;
+                }
+            }
+            &:hover {
+                .image {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .information {
+            padding: 1.5rem 2rem;
+            .name a {
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            .price-dtls {
+                
+            }
+            .brand {
+                img {
+                    max-height: 2.5rem;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

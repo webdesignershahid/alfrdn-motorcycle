@@ -1,0 +1,24 @@
+.section-title {
+    margin-bottom: 3rem;
+    font-size: 3.6rem;
+    font-weight: 500;
+    position: relative;
+    font-style: italic;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 65%;
+        transform: translateY(-50%);
+        height: .05rem;
+        background-color: $color__theme;
+        width: 100%;
+        left: 0;
+        z-index: -1;
+    }
+
+    > span {
+        background-color: #f7f6f5;
+        padding: 0 1rem;
+    }
+}

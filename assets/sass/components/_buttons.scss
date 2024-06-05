@@ -34,3 +34,17 @@
         color: $color__white;
     }
 }
+.btn__theme {
+    border: .1rem solid $color__theme;
+    background-color: $color__theme;
+    color: $color__black;
+    @include inline-flex-center;
+    padding: .8rem 2rem;
+    border-radius: .8rem;
+    transition: all .15s ease;
+    font-weight: 500;
+
+    &:hover {
+        color: $color__white;
+    }
+}

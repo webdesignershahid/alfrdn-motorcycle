@@ -270,6 +270,30 @@ textarea.form-control:focus {
   display: block;
 }
 
+.section-title {
+  margin-bottom: 3rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+  position: relative;
+  font-style: italic;
+  z-index: 1;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  height: 0.05rem;
+  background-color: #C89328;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+.section-title > span {
+  background-color: #f7f6f5;
+  padding: 0 1rem;
+}
+
 .topbutton {
   position: fixed;
   bottom: 3rem;
@@ -305,6 +329,22 @@ textarea.form-control:focus {
 .btn__primary__outline:hover {
   background-color: #C89328;
   border-color: #C89328;
+  color: #FFFFFF;
+}
+
+.btn__theme {
+  border: 0.1rem solid #C89328;
+  background-color: #C89328;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border-radius: 0.8rem;
+  transition: all 0.15s ease;
+  font-weight: 500;
+}
+.btn__theme:hover {
   color: #FFFFFF;
 }
 
@@ -518,6 +558,36 @@ header .offcanvas__toggler {
 
 .brands {
   padding: 3rem 0;
+}
+
+.bikes_display {
+  padding: 6rem 0;
+  background-color: #f7f6f5;
+}
+.bikes_display .swiper-wrapper {
+  padding-top: 3rem;
+}
+.bikes_display .bike_item {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+.bikes_display .bike_item.threeD .image img {
+  margin-top: -3rem;
+  transition: all 0.25s ease;
+}
+.bikes_display .bike_item.threeD:hover .image img {
+  transform: scale(1.05);
+}
+.bikes_display .bike_item .information {
+  padding: 1.5rem 2rem;
+}
+.bikes_display .bike_item .information .name a {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.bikes_display .bike_item .information .brand img {
+  max-height: 2.5rem;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
