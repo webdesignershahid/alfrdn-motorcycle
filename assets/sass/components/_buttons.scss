@@ -19,3 +19,18 @@
         opacity: 1;
     }
 }
+
+
+.btn__primary__outline {
+    border: .1rem solid $color__black;
+    @include inline-flex-center;
+    padding: .8rem 2rem;
+    border-radius: .8rem;
+    transition: all .15s ease;
+
+    &:hover {
+        background-color: $color__theme;
+        border-color: $color__theme;
+        color: $color__white;
+    }
+}

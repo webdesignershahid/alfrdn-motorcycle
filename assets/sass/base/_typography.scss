@@ -1,12 +1,9 @@
-// Import Google Font
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 /* 
 	=========================================================
 	Please Note::
 	=========================================================
 	** In this template All sizing will count in "rem".
 	** 1rem = 10px
-
 */
 html {
 	font-size: 58%;
@@ -26,15 +23,11 @@ body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	background-color: #FBFBFA;
 	font-family: $font__body;
-	// padding-top: 9rem;
-	// @include lg-up {
-	// 	padding-top: 10rem;
-	// }
-	// @include xxl-up {
-	// 	padding-top: 9.6rem;
-	// }
+	padding-top: 9rem;
+	@include xxl-up {
+		padding-top: 9.7rem;
+	}
 }
 p { 
 	font-size: 1.4rem;
@@ -52,13 +45,13 @@ ul, ol {
 	padding: 0;
 
 	li {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 	}
 }
 a {
 	color: inherit;
 	text-decoration: none;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	&:hover {
 		color: inherit;
 		text-decoration: none;

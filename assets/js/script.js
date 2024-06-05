@@ -16,19 +16,19 @@
             function mobile_menu(selector, actionSelector) {
                 var mobile_menu = $(selector);
                 mobile_menu.on("click", function() {
-                    $(selector).toggleClass('menu_active');
+                    $(selector).toggleClass('shown');
                 });
                 
                 var hamburgerbtn = $(selector);
                 hamburgerbtn.on("click", function() {
-                    $(actionSelector).toggleClass('menu_active');
+                    $(actionSelector).toggleClass('shown');
                 });
 
                 $(document).on('click', function(e) {
                     var selectorType = $(actionSelector).add(mobile_menu);
                     if (selectorType.is(e.target) !== true && selectorType.has(e.target).length === 0) {
-                        $(actionSelector).removeClass("menu_active");
-                        $(selector).removeClass("menu_active");
+                        $(actionSelector).removeClass("shown");
+                        $(selector).removeClass("shown");
                     }
                 });
                 // $(".menu_wrapper a").on('click', function() {
@@ -36,7 +36,7 @@
                 // });
             
             };
-            mobile_menu();  
+            mobile_menu('.offcanvas__toggler, .offcanvas__close', '.offcanvas__menu');  
         },
         
         /* ============================================================ */
@@ -63,36 +63,36 @@
         swiperCarousel: function () {
 
             // Homepage Signup Side Slider
-            let cabinetCarousel = new Swiper ('.evolutionSlider', {
+            let heroSlider = new Swiper('.heroSlider', {
                 spaceBetween: 10,
-                slidesPerView: 2,
-                loop: !1,
-                speed: 800,
-                autoplay: !1,
+                slidesPerView: 1,
+                loop: 1,
+                speed: 1000,
+                autoplay: 1,
+                navigation: {
+                    nextEl: ".heroSlider .button-next",
+                    prevEl: ".heroSlider .button-prev",
+                },
+            });
+            
+            // Homepage Signup Side Slider
+            let brandsSlider = new Swiper('.brandsSlider', {
+                spaceBetween: 10,
+                slidesPerView: 3,
+                loop: 1,
+                speed: 1000,
+                autoplay: {
+                    delay: 2000,
+                },
                 breakpoints: {
-                    576: {
-                        slidesPerView: 3,
-                    },
                     768: {
                         slidesPerView: 4,
                     },
-                    992: {
-                        slidesPerView: 5,
-                    },
-                    1200: {
-                        slidesPerView: 6,
-                    },
-                    1300: {
-                        slidesPerView: 7,
-                    },
-                    1400: {
-                        slidesPerView: 8,
-                    },
                 },
-                navigation: {
-                    nextEl: ".evolutionSlider .button-next",
-                    prevEl: ".evolutionSlider .button-prev",
-                },
+                // navigation: {
+                //     nextEl: ".heroSlider .button-next",
+                //     prevEl: ".heroSlider .button-prev",
+                // },
             });
             
         },
