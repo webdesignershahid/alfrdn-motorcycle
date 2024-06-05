@@ -271,7 +271,7 @@ textarea.form-control:focus {
 }
 
 .section-title {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   font-size: 3.6rem;
   font-weight: 500;
   position: relative;
@@ -290,7 +290,7 @@ textarea.form-control:focus {
   z-index: -1;
 }
 .section-title > span {
-  background-color: #f7f6f5;
+  background-color: var(--clr);
   padding: 0 1rem;
 }
 
@@ -546,6 +546,49 @@ header .offcanvas__toggler {
 /*--------------------------------------------------------------
 # Footer-block
 --------------------------------------------------------------*/
+footer .footer-top .cta-wrapper {
+  background-color: #efedea;
+  padding: 3rem;
+}
+footer .footer-middle {
+  padding: 8rem 0;
+}
+footer .footer-middle .menu-widget {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+}
+footer .footer-middle .widget .title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+footer .footer-middle .widget ul li + li {
+  margin-top: 1.5rem;
+}
+footer .footer-middle .widget ul li a {
+  padding: 0.3rem 0;
+  transition: all 0.15s ease;
+}
+footer .footer-middle .widget ul li a:hover {
+  color: #C89328;
+}
+footer .footer-middle .widget .social-icons a {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  transition: all 0.15s ease;
+}
+footer .footer-middle .widget .social-icons a:hover {
+  color: #C89328;
+}
+footer .footer-bottom {
+  background-color: #000000;
+  padding: 1rem 0;
+}
+footer .footer-bottom p {
+  font-size: 1.2rem;
+}
+
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
@@ -557,37 +600,92 @@ header .offcanvas__toggler {
 }
 
 .brands {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
-.bikes_display {
-  padding: 6rem 0;
+.latest-arrival, .life-styles {
+  padding: 8rem 0;
   background-color: #f7f6f5;
 }
-.bikes_display .swiper-wrapper {
-  padding-top: 3rem;
+
+.selection-products, .accessories {
+  padding: 8rem 0;
+  background-color: #f2f0ee;
 }
-.bikes_display .bike_item {
+
+.bike_item {
   background-color: #FFFFFF;
   border-radius: 1rem;
+  overflow: hidden;
 }
-.bikes_display .bike_item.threeD .image img {
-  margin-top: -3rem;
+.bike_item .image {
+  overflow: hidden;
+}
+.bike_item .image img {
   transition: all 0.25s ease;
 }
-.bikes_display .bike_item.threeD:hover .image img {
+.bike_item:hover .image img {
   transform: scale(1.05);
 }
-.bikes_display .bike_item .information {
+.bike_item .information {
   padding: 1.5rem 2rem;
 }
-.bikes_display .bike_item .information .name a {
+.bike_item .information .name a {
   font-size: 2rem;
   font-weight: 500;
 }
-.bikes_display .bike_item .information .brand img {
+.bike_item .information .price-dtls p {
+  font-size: 1.6rem;
+}
+.bike_item .information .brand img {
   max-height: 2.5rem;
   object-fit: cover;
+}
+
+.lifestyle-item {
+  z-index: 1;
+}
+.lifestyle-item .thumbnail {
+  margin-bottom: 3rem;
+}
+.lifestyle-item .caption {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 0 5rem;
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.lifestyle-item .caption a {
+  font-size: 1.8rem;
+}
+
+.follow-us {
+  padding: 8rem 0;
+  background-color: #000000;
+}
+.follow-us .social-icons {
+  text-align: center;
+  margin-top: 4rem;
+  border-top: 0.1rem solid #fff;
+  padding-top: 2rem;
+}
+.follow-us .social-icons a {
+  font-size: 3rem;
+  margin: 0 1rem;
+  transition: all 0.15s ease;
+}
+.follow-us .social-icons a:hover {
+  color: #C89328;
+}
+
+.our-location {
+  padding: 8rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

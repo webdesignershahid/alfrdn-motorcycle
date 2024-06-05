@@ -8,49 +8,100 @@
 }
 
 .brands {
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
 
-.bikes_display {
-    padding: 6rem 0;
+.latest-arrival, .life-styles {
+    padding: 8rem 0;
     background-color: #f7f6f5;
+}
+.selection-products, .accessories {
+    padding: 8rem 0;
+    background-color: #f2f0ee;
+}
+.bike_item {
+    background-color: $color__white;
+    border-radius: 1rem;
+    overflow: hidden;
+    .image {
+        overflow: hidden;
+        img {
+            transition: all .25s ease;
+        }
+    }
+    &:hover {
+        .image {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .information {
+        padding: 1.5rem 2rem;
+        .name a {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .price-dtls {
+            p {
+                font-size: 1.6rem;
+            }
+        }
+        .brand {
+            img {
+                max-height: 2.5rem;
+                object-fit: cover;
+            }
+        }
+    }
+}
 
-    .swiper-wrapper {
-        padding-top: 3rem;
+.lifestyle-item {
+    z-index: 1;
+    .thumbnail {
+        margin-bottom: 3rem;
     }
-    .bike_item {
-        background-color: $color__white;
-        border-radius: 1rem;
-        &.threeD {
-            .image {
-                img {
-                    margin-top: -3rem;
-                    transition: all .25s ease;
-                }
-            }
+    .caption {
+        background-color: $color__black;
+        color: $color__white;
+        font-weight: 600;
+        text-align: center;
+        padding: 3rem 2rem;
+        margin: 0 5rem;
+        position: absolute;
+        bottom: -3rem;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        a {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.follow-us {
+    padding: 8rem 0;
+    background-color: $color__black;
+
+
+    .social-icons {
+        text-align: center;
+        margin-top: 4rem;
+        border-top: .1rem solid #fff;
+        padding-top: 2rem;
+        a {
+            font-size: 3rem;
+            margin: 0 1rem;
+            transition: all .15s ease;
+
             &:hover {
-                .image {
-                    img {
-                        transform: scale(1.05);
-                    }
-                }
-            }
-        }
-        .information {
-            padding: 1.5rem 2rem;
-            .name a {
-                font-size: 2rem;
-                font-weight: 500;
-            }
-            .price-dtls {
-                
-            }
-            .brand {
-                img {
-                    max-height: 2.5rem;
-                    object-fit: cover;
-                }
+                color: $color__theme;
             }
         }
     }
+}
+
+.our-location {
+    padding: 8rem 0;
 }
