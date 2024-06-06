@@ -1,3 +1,48 @@
-.glightbox-clean .gslide-title {
-    margin: 0;
+.modal {
+    .btn-close {
+        width: 4rem;
+        height: 4rem;
+        color: $color__black;
+        border: .2rem solid $color__black;
+        box-shadow: none;
+        outline: 0;
+        border-radius: 50%;
+    }
+    .modal-header {
+        padding: 3rem 3rem;
+        border-bottom: 0;
+    }
+    .modal-body {
+        padding: 0 2rem 5rem;
+
+        @include lg-up {
+            padding: 0 5rem 5rem;
+        }
+    }
+    .modal-content {
+        background-size: cover;
+        background-position: center bottom;
+    }
+
+    &.searchModal {
+        .modal-body {
+            form {
+                max-width: 60rem;
+                margin: 8rem auto;
+                .form-control {
+                    padding: 1rem 1.5rem;
+                    font-size: 1.6rem;
+                }
+                button {
+                    padding: 0 3rem;
+                    border: 1px solid #ced4da;
+                    transition: all .25s ease;
+                    &:hover {
+                        background-color: $color__theme;
+                        color: $color__white;
+                    }
+                }
+            }
+        }
+    }
 }

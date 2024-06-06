@@ -37,6 +37,25 @@
             
             };
             mobile_menu('.offcanvas__toggler, .offcanvas__close', '.offcanvas__menu');  
+
+            $('.offcanvas__menu ul li.menu-item-has-children > a').on('click', function () {
+                var link = $(this);
+                var closestUl = link.closest("ul");
+                var parallelActiveLinks = closestUl.find(".active")
+                var closestLi = link.closest("li");
+                var linkStatus = closestLi.hasClass("active");
+                var count = 0;
+        
+                closestUl.find("ul").slideUp(function () {
+                    if (++count == closestUl.find("ul").length)
+                        parallelActiveLinks.removeClass("active");
+                });
+        
+                if (!linkStatus) {
+                    closestLi.children("ul").slideDown();
+                    closestLi.addClass("active");
+                }
+            });
         },
         
         /* ============================================================ */
@@ -64,11 +83,13 @@
 
             // Homepage Signup Side Slider
             let heroSlider = new Swiper('.heroSlider', {
-                spaceBetween: 10,
+                spaceBetween: 0,
                 slidesPerView: 1,
                 loop: 1,
-                speed: 1000,
-                autoplay: 1,
+                speed: 900,
+                autoplay: {
+                    delay: 5000,
+                },
                 navigation: {
                     nextEl: ".heroSlider .button-next",
                     prevEl: ".heroSlider .button-prev",
@@ -77,27 +98,28 @@
             
             // Homepage Signup Side Slider
             let brandsSlider = new Swiper('.brandsSlider', {
-                spaceBetween: 10,
+                spaceBetween: 30,
                 slidesPerView: 3,
                 loop: 1,
                 speed: 1000,
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                 },
                 breakpoints: {
                     768: {
                         slidesPerView: 4,
                     },
                 },
+
             });
             // Homepage Signup Side Slider
             let bike_slider = new Swiper('.bike_slider', {
                 spaceBetween: 30,
                 slidesPerView: 1,
                 loop: 1,
-                speed: 1000,
+                speed: 800,
                 autoplay: {
-                    delay: 2000,
+                    delay: 4000,
                 },
                 breakpoints: {
                     768: {
@@ -106,6 +128,13 @@
                     1200: {
                         slidesPerView: 3,
                     },
+                    1600: {
+                        slidesPerView: 4,
+                    },
+                },
+                navigation: {
+                    nextEl: ".bike_slider .button-next",
+                    prevEl: ".bike_slider .button-prev",
                 },
             });
             // Homepage Signup Side Slider
@@ -113,9 +142,9 @@
                 spaceBetween: 30,
                 slidesPerView: 1,
                 loop: 1,
-                speed: 1000,
+                speed: 800,
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                 },
                 breakpoints: {
                     768: {
@@ -124,6 +153,13 @@
                     1200: {
                         slidesPerView: 3,
                     },
+                    1600: {
+                        slidesPerView: 4,
+                    },
+                },
+                navigation: {
+                    nextEl: ".lifeStyleSlider .button-next",
+                    prevEl: ".lifeStyleSlider .button-prev",
                 },
             });
             // Homepage Signup Side Slider
@@ -131,9 +167,9 @@
                 spaceBetween: 30,
                 slidesPerView: 1,
                 loop: 1,
-                speed: 1000,
+                speed: 800,
                 autoplay: {
-                    delay: 3000,
+                    delay: 5000,
                 },
                 breakpoints: {
                     768: {
@@ -142,6 +178,13 @@
                     1200: {
                         slidesPerView: 3,
                     },
+                    1600: {
+                        slidesPerView: 4,
+                    },
+                },
+                navigation: {
+                    nextEl: ".accessoriesSlider .button-next",
+                    prevEl: ".accessoriesSlider .button-prev",
                 },
             });
             // Homepage Signup Side Slider
@@ -149,9 +192,9 @@
                 spaceBetween: 30,
                 slidesPerView: 1,
                 loop: 1,
-                speed: 1000,
+                speed: 800,
                 autoplay: {
-                    delay: 3000,
+                    delay: 4000,
                 },
                 breakpoints: {
                     768: {
@@ -160,6 +203,13 @@
                     1200: {
                         slidesPerView: 3,
                     },
+                    1600: {
+                        slidesPerView: 4,
+                    },
+                },
+                navigation: {
+                    nextEl: ".followUs_slider .button-next",
+                    prevEl: ".followUs_slider .button-prev",
                 },
             });
             

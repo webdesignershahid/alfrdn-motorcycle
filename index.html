@@ -29,6 +29,13 @@
     ================================================== -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
+    
+    <!-- Google Fonts
+    ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
     <!-- All CSS Here
     ================================================== -->
@@ -43,7 +50,7 @@
     Preloader Start
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <div class="preloader">
-        <!-- <img src="assets/img/alfardan-logo.png" alt="Alfardan Group"> -->
+        <img src="assets/img/logo.png"  alt="Alfardan Motorcycle">
     </div>
     <!--~~./ Preloader End ~~-->
 
@@ -56,14 +63,9 @@
         <div class="container">
             <nav class="nav align-items-center">
                 <a href="index.html" class="brand-logo">
-                    <img src="assets/img/logo.png" width="220" alt="Alfardan Motorcycle">
+                    <img src="assets/img/logo.png" alt="Alfardan Motorcycle">
                 </a>
                 <ul class="main-menu ms-auto">
-                    <li>
-                        <a href="#">
-                            HOME
-                        </a>
-                    </li>
                     <li class="menu-item-has-children">
                         <a href="#">
                             NEW BIKES
@@ -109,20 +111,85 @@
                             PRE-OWNED BIKES
                         </a>
                     </li>
-                    <li>
+                    <li class="menu-item-has-children">
                         <a href="#">
                             LIFESTYLE
                         </a>
+
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    RIDERS GEAR
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">LIFESTYLE CLOTHING</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="menu-item-has-children">
                         <a href="#">
                             ACCESSORIES
                         </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    COMPORT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    STYLING
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    PROTECTION
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    LUGGAGE
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    PERFORMANCE
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    ELECTRICAL
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    GARAGE/TRANSPORT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    SECURITY
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="menu-item-has-children">
                         <a href="#">
                             AFTERSALES
                         </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    SERVICE
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    PARTS
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">
@@ -134,7 +201,7 @@
                     <a href="#" class="btn__primary__outline">
                         ENQUIRE NOW
                     </a>
-                    <a href="#search_modal" data-bs-toggle="modal">
+                    <a href="#openSearch" data-bs-toggle="modal">
                         <i class="fal fa-search fa-2x"></i>
                     </a>
                     <button type="button" class="offcanvas__toggler">
@@ -154,39 +221,131 @@
             </button>
         </div>
 
-        <ul class="main-menu ms-auto">
-            <li class="menu-title">
-                Navigation Menu
-            </li>
-            <li>
-                <a href="#">
-                    HOME
-                </a>
-            </li>
-            <li>
+        <ul class="main-menu">
+            <li class="menu-item-has-children">
                 <a href="#">
                     NEW BIKES
                 </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">PIAGGIO</a>
+                    </li>
+                    <li>
+                        <a href="#">APPRILIA</a>
+                    </li>
+                    <li>
+                        <a href="#">MOTOGUZZI</a>
+                    </li>
+                    <li>
+                        <a href="#">VESPA</a>
+                    </li>
+                    <li>
+                        <a href="#">KTM</a>
+                    </li>
+                    <li>
+                        <a href="#">GASGAS</a>
+                    </li>
+                    <li>
+                        <a href="#">HUSQVARNA</a>
+                    </li>
+                    <li>
+                        <a href="#">MV AGUSTA</a>
+                    </li>
+                    <li>
+                        <a href="#">BMW MOTORRAD</a>
+                    </li>
+                    <li>
+                        <a href="#">DUCATI</a>
+                    </li>
+                    <li>
+                        <a href="#">TRIUMPH</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="#">
                     PRE-OWNED BIKES
                 </a>
             </li>
-            <li>
+            <li class="menu-item-has-children">
                 <a href="#">
                     LIFESTYLE
                 </a>
+
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">
+                            RIDERS GEAR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">LIFESTYLE CLOTHING</a>
+                    </li>
+                </ul>
             </li>
-            <li>
+            <li class="menu-item-has-children">
                 <a href="#">
                     ACCESSORIES
                 </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">
+                            COMPORT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            STYLING
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            PROTECTION
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            LUGGAGE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            PERFORMANCE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            ELECTRICAL
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            GARAGE/TRANSPORT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            SECURITY
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li>
+            <li class="menu-item-has-children">
                 <a href="#">
                     AFTERSALES
                 </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">
+                            SERVICE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            PARTS
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="#">
@@ -204,11 +363,17 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <div class="hero">
         <div class="heroSlider swiper">
+            <div class="nav-btn button-prev text-white">
+                <i class="far fa-chevron-left"></i>
+            </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide" style="background-image: url(assets/img/hero/1.png);"></div>
                 <div class="swiper-slide" style="background-image: url(assets/img/hero/2.png);"></div>
                 <div class="swiper-slide" style="background-image: url(assets/img/hero/3.png);"></div>
                 <div class="swiper-slide" style="background-image: url(assets/img/hero/4.png);"></div>
+            </div>
+            <div class="nav-btn button-next text-white">
+                <i class="far fa-chevron-right"></i>
             </div>
         </div>
     </div>
@@ -297,7 +462,7 @@
                     <div class="swiper-slide">
                         <a href="#">
                             <img 
-                                src="assets/img/brands-logo/vespa.svg" 
+                                src="assets/img/brands-logo/vespa.png" 
                                 alt=""
                             >
                         </a>
@@ -348,10 +513,13 @@
         <div class="container">
             <div class="section-title text-center">
                 <span style="--clr: #f7f6f5">
-                    Discover our <span>Latest Arrivals</span>
+                    Discover Our Latest Arrivals
                 </span>
             </div>
             <div class="bike_slider swiper">
+                <div class="nav-btn button-prev">
+                    <i class="fal fa-chevron-left"></i>
+                </div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="bike_item">
@@ -404,6 +572,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="nav-btn button-next">
+                    <i class="fal fa-chevron-right"></i>
+                </div>
             </div>
 
             <br>
@@ -423,10 +594,13 @@
         <div class="container">
             <div class="section-title text-center">
                 <span style="--clr: #f2f0ee">
-                    Browse Our Selection of <span>Pre-Owned Bikes</span>
+                    Browse Our Selection of Pre-Owned Bikes
                 </span>
             </div>
             <div class="bike_slider swiper">
+                <div class="nav-btn button-prev">
+                    <i class="fal fa-chevron-left"></i>
+                </div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="bike_item">
@@ -507,6 +681,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="nav-btn button-next">
+                    <i class="fal fa-chevron-right"></i>
+                </div>
             </div>
 
             <br>
@@ -531,6 +708,9 @@
             </div>
 
             <div class="lifeStyleSlider swiper">
+                <div class="nav-btn button-prev">
+                    <i class="fal fa-chevron-left"></i>
+                </div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="lifestyle-item position-relative">
@@ -683,6 +863,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="nav-btn button-next">
+                    <i class="fal fa-chevron-right"></i>
+                </div>
             </div>
             
             <br>
@@ -708,6 +891,9 @@
             </div>
 
             <div class="accessoriesSlider swiper">
+                <div class="nav-btn button-prev">
+                    <i class="fal fa-chevron-left"></i>
+                </div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="lifestyle-item position-relative">
@@ -771,6 +957,9 @@
                     </div>
                     
                 </div>
+                <div class="nav-btn button-next">
+                    <i class="fal fa-chevron-right"></i>
+                </div>
             </div>
 
             <br>
@@ -795,6 +984,9 @@
             </div>
 
             <div class="followUs_slider swiper">
+                <div class="nav-btn button-prev text-white">
+                    <i class="fal fa-chevron-left"></i>
+                </div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="update_thumb">
@@ -817,6 +1009,9 @@
                             </a>
                         </div>
                     </div>
+                </div>
+                <div class="nav-btn button-next text-white">
+                    <i class="fal fa-chevron-right"></i>
                 </div>
             </div>
 
@@ -850,14 +1045,80 @@
             </div>
 
             <div class="location-row">
-                <div class="row">
+                <div class="row g-5">
                     <div class="col-md-6">
-                        <div class="map">
-
+                        <div class="tab-content" >
+                            <div class="tab-pane fade show active" id="showroom" role="tabpanel">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.065015252876!2d51.54961007489601!3d25.369137424715927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c4c71979822b%3A0x1a1ecaac53c477f!2sAlfardan%20Motorcycles!5e0!3m2!1sen!2sbd!4v1717698116334!5m2!1sen!2sbd"></iframe>
+                            </div>
+                            <div class="tab-pane fade" id="serviceCenter" role="tabpanel">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.334257478059!2d51.496394174905525!3d25.660212112792305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45f9b00522354f%3A0x75832da202fc174!2sAlfardan%20Motorcycles%20Service%20Center!5e0!3m2!1sen!2sbd!4v1717698173390!5m2!1sen!2sbd"></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-
+                        <ul class="nav flex-column"  role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#showroom" class="nav-link active text-theme" data-bs-toggle="tab">
+                                    Showroom
+                                </a>
+                                <p>
+                                    Alfardan Motorcycles, Medina Centrale, The Pearl, Doha - Qatar.
+                                </p>
+                                <ul class="openings">
+                                    <li>
+                                        <div class="days">
+                                            Saturday - Thursday
+                                        </div>
+                                        <div class="hours">
+                                            09:00 am - 09:00 pm
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="days">
+                                            Friday
+                                        </div>
+                                        <div class="hours">
+                                            Closed
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#serviceCenter" class="nav-link text-theme" data-bs-toggle="tab">
+                                    Service Center
+                                </a>
+                                <p>
+                                    Industrial Area, Street No. 2, Building No. 7, Doha - Qatar.
+                                </p>
+                                <ul class="openings">
+                                    <li>
+                                        <div class="days">
+                                            Saturday - Wednesday
+                                        </div>
+                                        <div class="hours">
+                                            08:00 am - 05:00 pm
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="days">
+                                            Thursday
+                                        </div>
+                                        <div class="hours">
+                                            08:00 am - 02:00 pm
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="days">
+                                            Friday
+                                        </div>
+                                        <div class="hours">
+                                            Closed
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -872,23 +1133,23 @@
         <div class="footer-top">
             <div class="container">
                 <div class="cta-wrapper">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-6 col-lg-3">
                             <h5>
                                 Contact Us
                             </h5>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-md-6 col-lg-3">
                             <p>
                                 CALL <a href="tel:(974)44208666" class="fw-bold">(+974) 44208666</a>
                             </p>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-md-6 col-lg-3">
                             <p>
                                 WHATSAPP <a href="tel:(974)55993445" class="fw-bold">(974) 55993445</a>
                             </p>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-md-6 col-lg-3">
                             <p>
                                 EMAIL <a href="mailto:amc@alfardan.com.qa" class="fw-bold">amc@alfardan.com.qa</a>
                             </p>
@@ -1040,7 +1301,28 @@
     </footer>
     <!--~~./ end footer ~~-->
 
-
+    <div class="modal searchModal fade" id="openSearch" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="brand-logo">
+                        <img src="assets/img/logo.png" width="180" alt="">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="search" name="s" placeholder="Type..." class="form-control">
+                            <button type="submit" class="btn__secondary">
+                                <i class="fal fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- All The JS Files
