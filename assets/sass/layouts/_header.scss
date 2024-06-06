@@ -12,13 +12,27 @@ header {
     &.sticky {
         box-shadow: 0 0 1rem 0 rgba($color__black, .1);
     }
-
+    .brand-logo {
+        margin-right: auto;
+        img {
+            width: 18rem;
+            @include xxl-up {
+                width: 22rem;
+            }
+        }
+    }
     nav {
         gap: 2rem;
         .main-menu {
             display: flex;
             align-items: center;
-            gap: 2.5rem;
+            gap: 1.5rem;
+            @include xl-down {
+                display: none;
+            }
+            @include xxl-up {
+                gap: 2.5rem;
+            }
 
             > li {
                 > a {
@@ -30,7 +44,11 @@ header {
                 }
             }
         }
-
+        .btn__primary__outline {
+            @include sm-down {
+                display: none;
+            }
+        }
         .buttons {
             display: flex;
             align-items: center;

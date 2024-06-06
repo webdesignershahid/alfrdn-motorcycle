@@ -39,11 +39,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  padding-top: 9rem;
+  padding-top: 8rem;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    padding-top: 9rem;
+  }
 }
 @media screen and (min-width: 1400px) {
   body {
-    padding-top: 9.7rem;
+    padding-top: 9.5rem;
   }
 }
 
@@ -447,19 +452,45 @@ header {
 header.sticky {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
 }
+header .brand-logo {
+  margin-right: auto;
+}
+header .brand-logo img {
+  width: 18rem;
+}
+@media screen and (min-width: 1400px) {
+  header .brand-logo img {
+    width: 22rem;
+  }
+}
 header nav {
   gap: 2rem;
 }
 header nav .main-menu {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
+}
+@media screen and (max-width: 1199px) {
+  header nav .main-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header nav .main-menu {
+    gap: 2.5rem;
+  }
 }
 header nav .main-menu > li > a {
   font-weight: 500;
 }
 header nav .main-menu > li > a:hover {
   color: #C89328;
+}
+@media screen and (max-width: 575px) {
+  header nav .btn__primary__outline {
+    display: none;
+  }
 }
 header nav .buttons {
   display: flex;
@@ -555,8 +586,18 @@ footer .footer-middle {
 }
 footer .footer-middle .menu-widget {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-middle .menu-widget {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 992px) {
+  footer .footer-middle .menu-widget {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
 }
 footer .footer-middle .widget .title {
   font-size: 1.6rem;
@@ -593,10 +634,35 @@ footer .footer-bottom p {
 # Home Page
 --------------------------------------------------------------*/
 .heroSlider .swiper-slide {
-  min-height: 80rem;
+  min-height: 35rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (min-width: 576px) {
+  .heroSlider .swiper-slide {
+    min-height: 40rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .heroSlider .swiper-slide {
+    min-height: 50rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heroSlider .swiper-slide {
+    min-height: 60rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .heroSlider .swiper-slide {
+    min-height: 70rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .heroSlider .swiper-slide {
+    min-height: 80rem;
+  }
 }
 
 .brands {

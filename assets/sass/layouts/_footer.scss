@@ -12,8 +12,14 @@ footer {
         padding: 8rem 0;
         .menu-widget {
             display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 3rem 1rem;
+            @include md-up {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            @include lg-up {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+            }
         }
         .widget {
             .title {

@@ -64,7 +64,7 @@
 
             // Homepage Signup Side Slider
             let heroSlider = new Swiper('.heroSlider', {
-                spaceBetween: 10,
+                spaceBetween: 0,
                 slidesPerView: 1,
                 loop: 1,
                 speed: 1000,
@@ -77,7 +77,7 @@
             
             // Homepage Signup Side Slider
             let brandsSlider = new Swiper('.brandsSlider', {
-                spaceBetween: 10,
+                spaceBetween: 30,
                 slidesPerView: 3,
                 loop: 1,
                 speed: 1000,
@@ -106,6 +106,9 @@
                     1200: {
                         slidesPerView: 3,
                     },
+                    1600: {
+                        slidesPerView: 4,
+                    },
                 },
             });
             // Homepage Signup Side Slider
@@ -123,6 +126,9 @@
                     },
                     1200: {
                         slidesPerView: 3,
+                    },
+                    1600: {
+                        slidesPerView: 4,
                     },
                 },
             });
@@ -142,6 +148,9 @@
                     1200: {
                         slidesPerView: 3,
                     },
+                    1600: {
+                        slidesPerView: 4,
+                    },
                 },
             });
             // Homepage Signup Side Slider
@@ -159,6 +168,9 @@
                     },
                     1200: {
                         slidesPerView: 3,
+                    },
+                    1600: {
+                        slidesPerView: 4,
                     },
                 },
             });

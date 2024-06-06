@@ -24,9 +24,12 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: $font__body;
-	padding-top: 9rem;
+	padding-top: 8rem;
+	@include xl-up {
+		padding-top: 9rem;
+	}
 	@include xxl-up {
-		padding-top: 9.7rem;
+		padding-top: 9.5rem;
 	}
 }
 p { 
