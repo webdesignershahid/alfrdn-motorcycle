@@ -461,6 +461,37 @@ header nav .main-menu > li > a {
 header nav .main-menu > li > a:hover {
   color: #C89328;
 }
+header nav .main-menu .menu-item-has-children {
+  position: relative;
+}
+header nav .main-menu .menu-item-has-children .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateY(2rem) translateX(-50%);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  min-width: 23rem;
+  padding: 1rem 0;
+  transition: all 0.15s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+header nav .main-menu .menu-item-has-children .sub-menu a {
+  display: block;
+  padding: 0.8rem 2rem;
+  transition: all 0.15s ease;
+  font-weight: 500;
+}
+header nav .main-menu .menu-item-has-children .sub-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+header nav .main-menu .menu-item-has-children:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) translateX(-50%);
+}
 header nav .buttons {
   display: flex;
   align-items: center;
