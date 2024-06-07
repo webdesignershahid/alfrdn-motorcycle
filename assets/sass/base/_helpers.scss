@@ -48,15 +48,19 @@ input:-webkit-autofill:focus {
     -webkit-text-fill-color: $color__body !important;
 }
 .form-control {
+    padding: 1rem 1.5rem;
     font-size: 1.4rem;
+    @include xxxl-up {
+		font-size: 1.6rem;
+	}
 }
 textarea.form-control {
-    display: block;
-    width: 100%;
-    display: block;
     min-height: 15rem;
-    padding-top: 0;
+    padding: 1rem 1.5rem;
     font-size: 1.4rem;
+    @include xxxl-up {
+		font-size: 1.6rem;
+	}
 
     &:focus {
         outline: none;

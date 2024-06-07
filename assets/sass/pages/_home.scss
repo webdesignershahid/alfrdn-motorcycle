@@ -4,7 +4,6 @@
 
 .heroSlider {
     .swiper-slide {
-        // min-height: 80rem;
         min-height: 35rem;
         background-size: cover;
         background-repeat: no-repeat;
@@ -24,7 +23,7 @@
             min-height: 70rem;
         }
         @include xxxl-up {
-            min-height: 80rem;
+            min-height: 75rem;
         }
     }
 }
@@ -117,9 +116,11 @@
 
 .lifestyle-item {
     z-index: 1;
+    position: relative;
     .thumbnail {
         margin-bottom: 3rem;
         overflow: hidden;
+    
         img {
             transition: all .25s ease;
         }
@@ -130,12 +131,17 @@
         font-weight: 600;
         text-align: center;
         padding: 3rem 2rem;
-        margin: 0 5rem;
+        margin: 0 2rem;
         position: absolute;
         bottom: -3rem;
         left: 0;
         right: 0;
         z-index: 2;
+        transition: all .25s ease;
+
+        @include lg-up {
+            margin: 0 5rem;
+        }
 
         a {
             font-size: 1.8rem;
@@ -146,6 +152,9 @@
             img {
                 transform: scale(1.05);
             }
+        }
+        .caption {
+            background-color: $color__theme;
         }
     }
 }
@@ -187,6 +196,7 @@
             }
         }
     }
+
     .swiper {
         padding-left: var(--SliderNavPad);
         padding-right: var(--SliderNavPad);

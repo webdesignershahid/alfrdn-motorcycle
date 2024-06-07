@@ -47,7 +47,7 @@ header {
             .menu-item-has-children {
                 position: relative;
 
-                .sub-menu {
+                >.sub-menu {
                     position: absolute;
                     top: 100%;
                     left: 50%;
@@ -70,13 +70,32 @@ header {
                             background-color: rgba($color__black, .05);
                         }
                     }
+
+                    .sub-menu {
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        transform: translateY(1rem);
+                        background-color: $color__white;
+                        box-shadow: 0 0 1rem 0 rgba($color__black, .1);
+                        border-radius: .8rem;
+                        min-width: 23rem;
+                        padding: 1rem 0;
+                        transition: all .15s ease;
+                        opacity: 0;
+                        visibility: hidden;
+                    }                    
                 }
 
                 &:hover {
-                    .sub-menu {
+                    > .sub-menu {
                         opacity: 1;
                         visibility: visible;
                         transform: translateY(0) translateX(-50%);
+
+                        .sub-menu {
+                            transform: translate(0);
+                        }
                     }
                 }
             }
@@ -93,6 +112,10 @@ header {
 
             a {
                 font-weight: 500;
+
+                &:not(.btn__primary__outline):hover {
+                    color: $color__theme;
+                }
             }
         }
     }
@@ -143,9 +166,10 @@ header {
             border-radius: .2rem;
         }
     }
-
+    .buttons {
+        padding: 2rem 2rem;
+    }
     .main-menu {
-        margin-top: 3rem;
         padding: 2rem;
         .menu-title {
             font-weight: 600;

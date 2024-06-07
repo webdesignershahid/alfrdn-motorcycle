@@ -36,6 +36,10 @@ p {
 	font-size: 1.4rem;
 	line-height: 1.75;
 	margin: 0;
+
+	@include xxxl-up {
+		font-size: 1.6rem;
+	}
 }
 
 img {
@@ -49,12 +53,18 @@ ul, ol {
 
 	li {
 		font-size: 1.4rem;
+		@include xxxl-up {
+			font-size: 1.6rem;
+		}
 	}
 }
 a {
 	color: inherit;
 	text-decoration: none;
 	font-size: 1.4rem;
+	@include xxxl-up {
+		font-size: 1.6rem;
+	}
 	&:hover {
 		color: inherit;
 		text-decoration: none;

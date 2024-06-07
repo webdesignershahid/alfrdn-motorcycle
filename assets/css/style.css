@@ -1,10 +1,9 @@
 /*
-Template Name: Alfardan Group
+Template Name: Alfardan Motorcycle
 Template URI: 
-Author: Alfardan Group
-Author URI: https://www.alfardan.com.qa/
-Description: One of the leading family-owned conglomerates in the Middle East region for more than 65 years, with a business enterprise built around traditional family values and an uncompromising commitment to integrity, premium service and social responsibility.
-Version: 1.0.0
+Author: Alfardan Motorcycle
+Author URI: 
+Description: 
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -57,6 +56,11 @@ p {
   line-height: 1.75;
   margin: 0;
 }
+@media screen and (min-width: 1900px) {
+  p {
+    font-size: 1.6rem;
+  }
+}
 
 img {
   max-width: 100%;
@@ -71,11 +75,21 @@ ul, ol {
 ul li, ol li {
   font-size: 1.4rem;
 }
+@media screen and (min-width: 1900px) {
+  ul li, ol li {
+    font-size: 1.6rem;
+  }
+}
 
 a {
   color: inherit;
   text-decoration: none;
   font-size: 1.4rem;
+}
+@media screen and (min-width: 1900px) {
+  a {
+    font-size: 1.6rem;
+  }
 }
 a:hover {
   color: inherit;
@@ -224,16 +238,24 @@ input:-webkit-autofill:focus {
 }
 
 .form-control {
+  padding: 1rem 1.5rem;
   font-size: 1.4rem;
+}
+@media screen and (min-width: 1900px) {
+  .form-control {
+    font-size: 1.6rem;
+  }
 }
 
 textarea.form-control {
-  display: block;
-  width: 100%;
-  display: block;
   min-height: 15rem;
-  padding-top: 0;
+  padding: 1rem 1.5rem;
   font-size: 1.4rem;
+}
+@media screen and (min-width: 1900px) {
+  textarea.form-control {
+    font-size: 1.6rem;
+  }
 }
 textarea.form-control:focus {
   outline: none;
@@ -364,24 +386,27 @@ textarea.form-control:focus {
 }
 
 .modal .btn-close {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   color: #000000;
   border: 0.2rem solid #000000;
   box-shadow: none;
   outline: 0;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal .modal-header {
   padding: 3rem 3rem;
   border-bottom: 0;
 }
 .modal .modal-body {
-  padding: 0 2rem 5rem;
+  padding: 0 2rem 2rem;
 }
 @media screen and (min-width: 992px) {
   .modal .modal-body {
-    padding: 0 5rem 5rem;
+    padding: 0 5rem 3rem;
   }
 }
 .modal .modal-content {
@@ -404,6 +429,41 @@ textarea.form-control:focus {
 .modal.searchModal .modal-body form button:hover {
   background-color: #C89328;
   color: #FFFFFF;
+}
+.modal.contact_modal {
+  --bs-modal-width: 700px;
+  --bs-modal-bg: #000;
+}
+.modal.contact_modal .modal-header {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 2rem 2rem;
+}
+@media screen and (min-width: 992px) {
+  .modal.contact_modal .modal-header {
+    padding: 2rem 5rem;
+    font-size: 3.4rem;
+  }
+}
+.modal.contact_modal .modal-header .btn-close {
+  background: transparent;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  font-size: 2rem;
+}
+.modal.contact_modal fieldset + fieldset {
+  margin-top: 2rem;
+}
+.modal.contact_modal fieldset .form-control {
+  border-radius: 0;
+  font-size: 1.6rem;
+}
+.modal.contact_modal fieldset button[type=submit] {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1.2rem 4rem;
 }
 
 .pagination_wrapper {
@@ -541,7 +601,7 @@ header nav .main-menu > li > a:hover {
 header nav .main-menu .menu-item-has-children {
   position: relative;
 }
-header nav .main-menu .menu-item-has-children .sub-menu {
+header nav .main-menu .menu-item-has-children > .sub-menu {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -555,19 +615,36 @@ header nav .main-menu .menu-item-has-children .sub-menu {
   opacity: 0;
   visibility: hidden;
 }
-header nav .main-menu .menu-item-has-children .sub-menu a {
+header nav .main-menu .menu-item-has-children > .sub-menu a {
   display: block;
   padding: 0.8rem 2rem;
   transition: all 0.15s ease;
   font-weight: 500;
 }
-header nav .main-menu .menu-item-has-children .sub-menu a:hover {
+header nav .main-menu .menu-item-has-children > .sub-menu a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-header nav .main-menu .menu-item-has-children:hover .sub-menu {
+header nav .main-menu .menu-item-has-children > .sub-menu .sub-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translateY(1rem);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  min-width: 23rem;
+  padding: 1rem 0;
+  transition: all 0.15s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+header nav .main-menu .menu-item-has-children:hover > .sub-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0) translateX(-50%);
+}
+header nav .main-menu .menu-item-has-children:hover > .sub-menu .sub-menu {
+  transform: translate(0);
 }
 @media screen and (max-width: 575px) {
   header nav .btn__primary__outline {
@@ -581,6 +658,9 @@ header nav .buttons {
 }
 header nav .buttons a {
   font-weight: 500;
+}
+header nav .buttons a:not(.btn__primary__outline):hover {
+  color: #C89328;
 }
 header .offcanvas__toggler {
   border: 0.1rem solid #C89328;
@@ -633,8 +713,10 @@ header .offcanvas__toggler {
   border: 0;
   border-radius: 0.2rem;
 }
+.offcanvas__menu .buttons {
+  padding: 2rem 2rem;
+}
 .offcanvas__menu .main-menu {
-  margin-top: 3rem;
   padding: 2rem;
 }
 .offcanvas__menu .main-menu .menu-title {
@@ -779,7 +861,7 @@ footer .footer-bottom p {
 }
 @media screen and (min-width: 1900px) {
   .heroSlider .swiper-slide {
-    min-height: 80rem;
+    min-height: 75rem;
   }
 }
 
@@ -864,6 +946,7 @@ footer .footer-bottom p {
 
 .lifestyle-item {
   z-index: 1;
+  position: relative;
 }
 .lifestyle-item .thumbnail {
   margin-bottom: 3rem;
@@ -878,18 +961,27 @@ footer .footer-bottom p {
   font-weight: 600;
   text-align: center;
   padding: 3rem 2rem;
-  margin: 0 5rem;
+  margin: 0 2rem;
   position: absolute;
   bottom: -3rem;
   left: 0;
   right: 0;
   z-index: 2;
+  transition: all 0.25s ease;
+}
+@media screen and (min-width: 992px) {
+  .lifestyle-item .caption {
+    margin: 0 5rem;
+  }
 }
 .lifestyle-item .caption a {
   font-size: 1.8rem;
 }
 .lifestyle-item:hover .thumbnail img {
   transform: scale(1.05);
+}
+.lifestyle-item:hover .caption {
+  background-color: #C89328;
 }
 
 .follow-us {
