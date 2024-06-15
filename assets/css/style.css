@@ -315,6 +315,12 @@ textarea.form-control:focus {
     font-size: 3.6rem;
   }
 }
+@media screen and (min-width: 1400px) {
+  .section-title {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+}
 .section-title::before {
   content: "";
   position: absolute;
@@ -329,6 +335,11 @@ textarea.form-control:focus {
 .section-title > span {
   background-color: var(--clr);
   padding: 0 1rem;
+}
+@media screen and (min-width: 1400px) {
+  .section-title > span {
+    padding: 0 2rem;
+  }
 }
 
 .topbutton {
@@ -951,6 +962,8 @@ footer .footer-bottom p {
 .lifestyle-item .thumbnail {
   margin-bottom: 3rem;
   overflow: hidden;
+  transition: all 0.15s ease;
+  border-radius: 0.8rem;
 }
 .lifestyle-item .thumbnail img {
   transition: all 0.25s ease;
@@ -1064,6 +1077,74 @@ footer .footer-bottom p {
 .our-location iframe {
   width: 100%;
   min-height: 30rem;
+}
+
+/*--------------------------------------------------------------
+# Lifestyle Page
+--------------------------------------------------------------*/
+.lifestyle-banner .swiper-slide {
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 576px) {
+  .lifestyle-banner .swiper-slide {
+    height: 35rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .lifestyle-banner .swiper-slide {
+    height: 40rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .lifestyle-banner .swiper-slide {
+    height: 50rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lifestyle-banner .swiper-slide {
+    height: 60rem;
+  }
+}
+
+.lifestyle_display {
+  padding: 8rem 0;
+  background-color: #F7F6F5;
+}
+.lifestyle_display .row {
+  --bs-gutter-x: 3rem;
+  --bs-gutter-y: 3rem;
+  justify-content: center;
+}
+@media screen and (min-width: 1400px) {
+  .lifestyle_display .row {
+    --bs-gutter-x: 6rem;
+    --bs-gutter-y: 6rem;
+  }
+}
+.lifestyle_display .lifestyle-item .thumbnail {
+  border: 0.1rem solid #000000;
+  height: 32rem;
+}
+.lifestyle_display .lifestyle-item .thumbnail > a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lifestyle_display .lifestyle-item .caption {
+  border-radius: 0.8rem;
+}
+@media screen and (min-width: 992px) {
+  .lifestyle_display .lifestyle-item .caption {
+    margin: 0 4rem;
+  }
+}
+.lifestyle_display .lifestyle-item:hover .thumbnail {
+  border-color: #C89328;
 }
 
 /*# sourceMappingURL=style.css.map */

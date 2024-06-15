@@ -12,6 +12,10 @@
     @include xl-up {
         font-size: 3.6rem;
     }
+    @include xxl-up {
+        font-size: 4rem;
+        font-weight: 700;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -27,5 +31,8 @@
     > span {
         background-color: var(--clr);
         padding: 0 1rem;
+        @include xxl-up {
+            padding: 0 2rem;
+        }
     }
 }

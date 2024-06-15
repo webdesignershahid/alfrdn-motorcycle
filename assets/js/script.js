@@ -96,7 +96,7 @@
                 },
             });
             
-            // Homepage Signup Side Slider
+            // BrandSlider Slider
             let brandsSlider = new Swiper('.brandsSlider', {
                 spaceBetween: 30,
                 slidesPerView: 3,
@@ -112,7 +112,7 @@
                 },
 
             });
-            // Homepage Signup Side Slider
+            // Home Bike display Slider
             let bike_slider = new Swiper('.bike_slider', {
                 spaceBetween: 30,
                 slidesPerView: 1,
@@ -137,7 +137,7 @@
                     prevEl: ".bike_slider .button-prev",
                 },
             });
-            // Homepage Signup Side Slider
+            // Home LifestyleSlider Slider
             let lifeStyleSlider = new Swiper('.lifeStyleSlider', {
                 spaceBetween: 30,
                 slidesPerView: 1,
@@ -162,7 +162,7 @@
                     prevEl: ".lifeStyleSlider .button-prev",
                 },
             });
-            // Homepage Signup Side Slider
+            // Home Accessories Slider
             let accessoriesSlider = new Swiper('.accessoriesSlider', {
                 spaceBetween: 30,
                 slidesPerView: 1,
@@ -187,7 +187,7 @@
                     prevEl: ".accessoriesSlider .button-prev",
                 },
             });
-            // Homepage Signup Side Slider
+            // Home Folow Us Slider
             let followUs_slider = new Swiper('.followUs_slider', {
                 spaceBetween: 30,
                 slidesPerView: 1,
@@ -210,6 +210,23 @@
                 navigation: {
                     nextEl: ".followUs_slider .button-next",
                     prevEl: ".followUs_slider .button-prev",
+                },
+            });
+
+            // Lifestyle Banner Slider
+            var interleaveOffset = 0.5;
+            let lifestyleBanner = new Swiper('.lifestyle-banner', {
+                spaceBetween: 0,
+                slidesPerView: 1,
+                loop: 1,
+                speed: 900,
+                effect: "fade",
+                autoplay: {
+                    delay: 5000,
+                },
+                navigation: {
+                    nextEl: ".lifestyle-banner .button-next",
+                    prevEl: ".lifestyle-banner .button-prev",
                 },
             });
             
