@@ -53,6 +53,12 @@ input:-webkit-autofill:focus {
     @include xxxl-up {
 		font-size: 1.6rem;
 	}
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: $color__black;
+    }
 }
 textarea.form-control {
     min-height: 15rem;
@@ -67,6 +73,7 @@ textarea.form-control {
         box-shadow: none;
     }
 }
+
 .form-floating > .form-control {
     border: none;
     border-bottom: .1rem solid rgba(0,0,0,0.1);

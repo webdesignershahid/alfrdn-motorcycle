@@ -62,7 +62,7 @@
         /* StickyHeader
         /* ============================================================ */
         sticky_header: function() {
-            var header = $("header");
+            var header = $("header, .brand_header");
             // Add a scroll event listener to the window object
             window.addEventListener('scroll', () => {
                 const scrollPosition = window.scrollY;
@@ -112,8 +112,8 @@
                 },
 
             });
-            // Home Bike display Slider
-            let bike_slider = new Swiper('.bike_slider', {
+            // Home Preowned Bikes Slider
+            let preowned_bike_slider = new Swiper('.preowned-bikes .bike_slider', {
                 spaceBetween: 30,
                 slidesPerView: 1,
                 loop: 1,
@@ -133,8 +133,33 @@
                     },
                 },
                 navigation: {
-                    nextEl: ".bike_slider .button-next",
-                    prevEl: ".bike_slider .button-prev",
+                    nextEl: ".preowned-bikes .button-next",
+                    prevEl: ".preowned-bikes .button-prev",
+                },
+            });
+            // Home Bike display Slider
+            let latest_arrival_bike_slider = new Swiper('.latest-arrival .bike_slider', {
+                spaceBetween: 30,
+                slidesPerView: 1,
+                loop: 1,
+                speed: 800,
+                autoplay: {
+                    delay: 4000,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                    },
+                    1600: {
+                        slidesPerView: 4,
+                    },
+                },
+                navigation: {
+                    nextEl: ".latest-arrival .button-next",
+                    prevEl: ".latest-arrival .button-prev",
                 },
             });
             // Home LifestyleSlider Slider
@@ -169,7 +194,7 @@
                 loop: 1,
                 speed: 800,
                 autoplay: {
-                    delay: 5000,
+                    delay: 4000,
                 },
                 breakpoints: {
                     768: {
@@ -194,7 +219,7 @@
                 loop: 1,
                 speed: 800,
                 autoplay: {
-                    delay: 4000,
+                    delay: 5000,
                 },
                 breakpoints: {
                     768: {
@@ -222,11 +247,31 @@
                 speed: 900,
                 effect: "fade",
                 autoplay: {
-                    delay: 5000,
+                    delay: 4000,
                 },
                 navigation: {
                     nextEl: ".lifestyle-banner .button-next",
                     prevEl: ".lifestyle-banner .button-prev",
+                },
+            });
+            
+            // Lifestyle Banner Slider
+            let brand_models_slider = new Swiper('.brand_models_slider', {
+                spaceBetween: 30,
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                grid: { 
+                    rows: 2, 
+                    fill: "row" 
+                },
+                // loop: 1,
+                speed: 900,
+                autoplay: {
+                    delay: 4000,
+                },
+                navigation: {
+                    nextEl: ".brand_models_slider .button-next",
+                    prevEl: ".brand_models_slider .button-prev",
                 },
             });
             

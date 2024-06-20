@@ -220,3 +220,57 @@ header {
         }
     }
 }
+
+.brand_header {
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    width: 100%;
+    z-index: 1024;
+    transition: all .15s ease;
+    
+    @include xl-up {
+        top: 8.5rem;
+    }
+
+    &.sticky {
+        top: 2rem;
+    }
+    
+    nav {
+        background-color: #fafafa;
+        box-shadow: 0 4px 20px 2px rgba(#000, 0.25);
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 1.5rem;
+        @include xl-up {
+            padding: 2.5rem 4rem;
+        }
+
+        button {
+            background-color: transparent;
+            border: 0;
+            font-size: 2rem;
+        }
+        a {
+            font-size: 1.2rem;
+            font-weight: 500;
+            @include xl-up {
+                font-size: 1.4rem;
+            }
+            @include xxxl-up {
+                font-size: 1.8rem;
+            }
+        }
+        .menu-link {
+            @include md-down {
+                display: none;
+            }
+        }
+        .logo {
+            @include xxl-down {
+                max-width: 5rem;
+            }
+        }
+    }
+}

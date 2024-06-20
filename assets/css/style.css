@@ -246,6 +246,11 @@ input:-webkit-autofill:focus {
     font-size: 1.6rem;
   }
 }
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #000000;
+}
 
 textarea.form-control {
   min-height: 15rem;
@@ -365,6 +370,22 @@ textarea.form-control:focus {
   opacity: 1;
 }
 
+.btn__primary {
+  border: 0.1rem solid #000000;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border-radius: 0.8rem;
+  transition: all 0.15s ease;
+}
+.btn__primary:hover {
+  background-color: #C89328;
+  border-color: #C89328;
+}
+
 .btn__primary__outline {
   border: 0.1rem solid #000000;
   display: inline-flex;
@@ -393,6 +414,44 @@ textarea.form-control:focus {
   font-weight: 500;
 }
 .btn__theme:hover {
+  color: #FFFFFF;
+}
+
+.btn__darkred {
+  background-color: #CC0000;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  font-weight: 500;
+  padding: 2.5rem 4rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+@media screen and (max-width: 991px) {
+  .btn__darkred {
+    padding: 1.5rem 3rem;
+  }
+}
+.btn__darkred:hover {
+  color: #FFFFFF;
+}
+
+.btn__blue {
+  background-color: #0066B1;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  font-weight: 500;
+  padding: 2.5rem 4rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+@media screen and (max-width: 991px) {
+  .btn__blue {
+    padding: 1.5rem 3rem;
+  }
+}
+.btn__blue:hover {
   color: #FFFFFF;
 }
 
@@ -506,7 +565,7 @@ textarea.form-control:focus {
 .preloader {
   position: fixed;
   inset: 0;
-  z-index: 1024;
+  z-index: 9999;
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -770,6 +829,64 @@ header .offcanvas__toggler {
   margin: 1rem 0;
 }
 
+.brand_header {
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+  z-index: 1024;
+  transition: all 0.15s ease;
+}
+@media screen and (min-width: 1200px) {
+  .brand_header {
+    top: 8.5rem;
+  }
+}
+.brand_header.sticky {
+  top: 2rem;
+}
+.brand_header nav {
+  background-color: #fafafa;
+  box-shadow: 0 4px 20px 2px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .brand_header nav {
+    padding: 2.5rem 4rem;
+  }
+}
+.brand_header nav button {
+  background-color: transparent;
+  border: 0;
+  font-size: 2rem;
+}
+.brand_header nav a {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 1200px) {
+  .brand_header nav a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .brand_header nav a {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .brand_header nav .menu-link {
+    display: none;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .brand_header nav .logo {
+    max-width: 5rem;
+  }
+}
+
 /*--------------------------------------------------------------
     [ ## Page Banner]
 --------------------------------------------------------------*/
@@ -837,6 +954,30 @@ footer .footer-bottom p {
   font-size: 1.2rem;
 }
 
+.brand_footer {
+  background-color: #0F0F0F;
+  padding: 4rem 0;
+  border-bottom: 1.6rem solid transparent;
+}
+.brand_footer.ducati {
+  border-color: #CC0000;
+}
+.brand_footer.bmw {
+  border-color: #0066B1;
+}
+.brand_footer .social-icons {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.brand_footer .social-icons a {
+  margin: 0 1rem;
+}
+.brand_footer p {
+  color: #FFFFFF;
+  margin-top: 1rem;
+}
+
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
@@ -888,6 +1029,10 @@ footer .footer-bottom p {
   justify-content: center;
   user-select: none;
   font-size: 3rem;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: #C7C9C7;
 }
 .swiper .nav-btn:hover {
   color: #C89328;
@@ -917,11 +1062,11 @@ footer .footer-bottom p {
   padding-right: var(--SliderNavPad);
 }
 
-.selection-products, .accessories {
+.preowned-bikes, .accessories {
   padding: 8rem 0;
   background-color: #f2f0ee;
 }
-.selection-products .swiper, .accessories .swiper {
+.preowned-bikes .swiper, .accessories .swiper {
   padding-left: var(--SliderNavPad);
   padding-right: var(--SliderNavPad);
 }
@@ -964,6 +1109,9 @@ footer .footer-bottom p {
   overflow: hidden;
   transition: all 0.15s ease;
   border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .lifestyle-item .thumbnail img {
   transition: all 0.25s ease;
@@ -971,6 +1119,7 @@ footer .footer-bottom p {
 .lifestyle-item .caption {
   background-color: #000000;
   color: #FFFFFF;
+  font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
   padding: 3rem 2rem;
@@ -986,9 +1135,6 @@ footer .footer-bottom p {
   .lifestyle-item .caption {
     margin: 0 5rem;
   }
-}
-.lifestyle-item .caption a {
-  font-size: 1.8rem;
 }
 .lifestyle-item:hover .thumbnail img {
   transform: scale(1.05);
@@ -1079,6 +1225,16 @@ footer .footer-bottom p {
   min-height: 30rem;
 }
 
+.preowned_bikes {
+  background-color: #F7F7F7;
+  padding: 8rem 0;
+}
+@media screen and (min-width: 1400px) {
+  .preowned_bikes {
+    padding: 10rem 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # Lifestyle Page
 --------------------------------------------------------------*/
@@ -1127,10 +1283,6 @@ footer .footer-bottom p {
 .lifestyle_display .lifestyle-item .thumbnail {
   border: 0.1rem solid #000000;
   height: 32rem;
-}
-.lifestyle_display .lifestyle-item .thumbnail > a {
-  position: absolute;
-  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1145,6 +1297,229 @@ footer .footer-bottom p {
 }
 .lifestyle_display .lifestyle-item:hover .thumbnail {
   border-color: #C89328;
+}
+.lifestyle_display .lifestyle-item .dropdown-menu {
+  transform: translate(0, 0) scale(1.2) !important;
+}
+.lifestyle_display .lifestyle-item .dropdown-menu ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/*--------------------------------------------------------------
+# Pre-owned Page
+--------------------------------------------------------------*/
+.filter_preowned_bikes {
+  background-color: #EAE8E5;
+  padding: 2rem;
+  margin-bottom: 5rem;
+}
+.filter_preowned_bikes .button-group {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+}
+.filter_preowned_bikes .button-group button {
+  flex: 1;
+  border-radius: 0;
+  min-height: 4.6rem;
+}
+.filter_preowned_bikes select {
+  background-image: url(../img/down-arrow.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  font-weight: 500;
+  min-height: 4.6rem;
+}
+
+/*--------------------------------------------------------------
+# Brand Details Page
+--------------------------------------------------------------*/
+.brand__hero {
+  background-size: cover;
+  background-position: center;
+}
+.brand__hero .hero_container {
+  min-height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .brand__hero .hero_container {
+    min-height: 70rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .brand__hero .hero_container {
+    min-height: 90rem;
+  }
+}
+.brand__hero .hero_container {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+.brand__hero .hero_container p {
+  font-size: 2.4rem;
+  color: #FFFFFF;
+}
+.brand__hero .hero_container .main_title {
+  color: #FFFFFF;
+  font-size: 4rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 1200px) {
+  .brand__hero .hero_container .main_title {
+    font-size: 4.8rem;
+  }
+}
+.brand__hero .header_top {
+  padding: 2rem 0;
+}
+.brand__hero .header_top ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.brand__hero .header_top ul li, .brand__hero .header_top ul a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .brand__hero .header_top ul li, .brand__hero .header_top ul a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .brand__hero .header_top ul li, .brand__hero .header_top ul a {
+    font-size: 1.8rem;
+  }
+}
+.brand__hero .header_top ul img {
+  max-width: 6rem;
+}
+@media screen and (min-width: 1200px) {
+  .brand__hero .header_top ul img {
+    max-width: 100%;
+  }
+}
+
+.brand_models {
+  padding: 8rem 0;
+  background-color: #fafafa;
+}
+.brand_models .section__title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+.brand_models .brand_model_item figure {
+  overflow: hidden;
+}
+.brand_models .brand_model_item figure img {
+  transition: all 0.15s linear;
+}
+.brand_models .brand_model_item figcaption {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.brand_models .brand_model_item:hover figure img {
+  transform: scale(1.05);
+}
+
+.enquire_cta {
+  padding: 8rem 0;
+  background-size: cover;
+  background-position: center;
+  min-height: 50rem;
+}
+@media screen and (min-width: 1200px) {
+  .enquire_cta {
+    padding: 12rem 0;
+    min-height: 60rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .enquire_cta {
+    padding: 18rem 0;
+    min-height: 80rem;
+  }
+}
+.enquire_cta .cta_content p {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 992px) {
+  .enquire_cta .cta_content p {
+    font-size: 2.4rem;
+  }
+}
+.enquire_cta .cta_content .main_title {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  color: #FFFFFF;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 1200px) {
+  .enquire_cta .cta_content .main_title {
+    font-size: 4.8rem;
+  }
+}
+.enquire_cta .cta_content .button {
+  margin-top: 10rem;
+}
+
+.knowMore_cta {
+  padding: 8rem 0;
+}
+.knowMore_cta .cta_content {
+  background-size: cover;
+  background-position: center;
+  min-height: 50rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .knowMore_cta .cta_content {
+    padding: 5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .knowMore_cta .cta_content {
+    min-height: 60rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .knowMore_cta .cta_content {
+    min-height: 80rem;
+  }
+}
+.knowMore_cta .cta_content p {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 992px) {
+  .knowMore_cta .cta_content p {
+    font-size: 2.4rem;
+  }
+}
+.knowMore_cta .cta_content .main_title {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  color: #FFFFFF;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 1200px) {
+  .knowMore_cta .cta_content .main_title {
+    font-size: 4.8rem;
+  }
+}
+.knowMore_cta .cta_content .button {
+  margin-top: 8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

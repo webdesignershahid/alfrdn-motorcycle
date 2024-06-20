@@ -1,0 +1,24 @@
+.filter_preowned_bikes {
+    background-color: #EAE8E5;
+    padding: 2rem;
+    margin-bottom: 5rem;
+
+    .button-group {
+        display: flex;
+        align-items: stretch;
+        gap: 2rem;
+        button {
+            flex: 1;
+            border-radius: 0;
+            min-height: 4.6rem;
+        }
+    }
+    select {
+        background-image: url(../img/down-arrow.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 98% 50%;
+        font-weight: 500;
+        min-height: 4.6rem;
+    }
+}

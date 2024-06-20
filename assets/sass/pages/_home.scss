@@ -38,7 +38,10 @@
         @include flex-center;
         user-select: none;
         font-size: 3rem;
-
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        color: #C7C9C7;
         &:hover {
             color: $color__theme;
         }
@@ -68,7 +71,7 @@
         padding-right: var(--SliderNavPad);
     }
 }
-.selection-products, .accessories {
+.preowned-bikes, .accessories {
     padding: 8rem 0;
     background-color: #f2f0ee;
 
@@ -122,6 +125,7 @@
         overflow: hidden;
         transition: all .15s ease;
         border-radius: .8rem;
+        @include flex-center;
         img {
             transition: all .25s ease;
         }
@@ -129,6 +133,7 @@
     .caption {
         background-color: $color__black;
         color: $color__white;
+        font-size: 1.8rem;
         font-weight: 600;
         text-align: center;
         padding: 3rem 2rem;
@@ -142,10 +147,6 @@
 
         @include lg-up {
             margin: 0 5rem;
-        }
-
-        a {
-            font-size: 1.8rem;
         }
     }
     &:hover {
@@ -246,5 +247,13 @@
     iframe {
         width: 100%;
         min-height: 30rem;
+    }
+}
+
+.preowned_bikes {
+    background-color: #F7F7F7;
+    padding: 8rem 0;
+    @include xxl-up {
+        padding: 10rem 0;
     }
 }
