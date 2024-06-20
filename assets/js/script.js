@@ -258,7 +258,7 @@
             // Lifestyle Banner Slider
             let brand_models_slider = new Swiper('.brand_models_slider', {
                 spaceBetween: 30,
-                slidesPerView: 3,
+                slidesPerView: 1,
                 slidesPerColumn: 2,
                 grid: { 
                     rows: 2, 
@@ -272,6 +272,14 @@
                 navigation: {
                     nextEl: ".brand_models_slider .button-next",
                     prevEl: ".brand_models_slider .button-prev",
+                },
+                breakpoints: {
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
                 },
             });
             

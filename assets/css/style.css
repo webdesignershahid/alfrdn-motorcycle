@@ -1043,6 +1043,14 @@ footer .footer-bottom p {
 .swiper .nav-btn.button-next {
   right: 0;
 }
+.swiper .nav-btn svg {
+  width: 1.5rem;
+}
+@media screen and (min-width: 1400px) {
+  .swiper .nav-btn svg {
+    width: 2.2rem;
+  }
+}
 
 .brands {
   padding: 2rem 0;
@@ -1481,6 +1489,8 @@ footer .footer-bottom p {
   background-position: center;
   min-height: 50rem;
   padding: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .knowMore_cta .cta_content {
@@ -1520,6 +1530,15 @@ footer .footer-bottom p {
 }
 .knowMore_cta .cta_content .button {
   margin-top: 8rem;
+}
+.knowMore_cta .cta_content .bg-video {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */
