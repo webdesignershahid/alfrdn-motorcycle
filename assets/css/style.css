@@ -1571,10 +1571,8 @@ footer .footer-bottom p {
     min-height: 90rem;
   }
 }
-.brand__hero .hero_container {
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
-}
 .brand__hero .hero_container p {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
   font-size: 2.4rem;
   color: #FFFFFF;
 }
@@ -1582,6 +1580,7 @@ footer .footer-bottom p {
   color: #FFFFFF;
   font-size: 4rem;
   font-weight: 700;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
 }
 @media screen and (min-width: 1200px) {
   .brand__hero .hero_container .main_title {
@@ -1746,6 +1745,60 @@ footer .footer-bottom p {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/*--------------------------------------------------------------
+# Model Details Page
+--------------------------------------------------------------*/
+.model_details_hero {
+  background-size: cover;
+  background-position: center;
+}
+.model_details_hero .hero_container {
+  min-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 10rem;
+}
+@media screen and (min-width: 992px) {
+  .model_details_hero .hero_container {
+    min-height: 55rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .model_details_hero .hero_container {
+    min-height: 80rem;
+  }
+}
+.model_details_hero .hero_container p {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  font-size: 2.4rem;
+  color: #FFFFFF;
+}
+.model_details_hero .hero_container .main_title {
+  color: #FFFFFF;
+  font-size: 4rem;
+  font-weight: 700;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+@media screen and (min-width: 1200px) {
+  .model_details_hero .hero_container .main_title {
+    font-size: 4.8rem;
+  }
+}
+
+.model_intro {
+  padding: 8rem 0;
+}
+.model_intro .row {
+  --bs-gutter-x: 5rem;
+  --bs-gutter-y: 3rem;
+}
+.model_intro .title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

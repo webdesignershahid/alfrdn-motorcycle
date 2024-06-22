@@ -1,0 +1,49 @@
+.model_details_hero {
+    background-size: cover;
+    background-position: center;
+    
+    .hero_container {
+        min-height: 35rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 10rem;
+
+        @include lg-up {
+            min-height: 55rem;
+        }
+        @include xl-up {
+            min-height: 80rem;
+        }
+
+        p {
+            filter: drop-shadow(0 4px 8px rgba(#000, 0.5));
+            font-size: 2.4rem;
+            color: $color__white;
+        }
+        .main_title {
+            color: $color__white;
+            font-size: 4rem;
+            font-weight: 700;
+            filter: drop-shadow(0 4px 8px rgba(#000, 0.5));
+            @include xl-up {
+                font-size: 4.8rem;
+            }
+        }
+    }
+}
+
+
+.model_intro {
+    padding: 8rem 0;
+
+    .row {
+        --bs-gutter-x: 5rem;
+        --bs-gutter-y: 3rem;
+    }
+    .title {
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+}
