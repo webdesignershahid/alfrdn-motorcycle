@@ -268,8 +268,10 @@ header {
             }
         }
         .logo {
-            @include xxl-down {
-                max-width: 5rem;
+            img {
+                @include xxl-down {
+                    height: 3rem;
+                }                
             }
         }
     }

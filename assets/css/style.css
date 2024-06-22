@@ -221,6 +221,10 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  background-image: url(../img/down-arrow.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
 input:-webkit-autofill,
@@ -882,8 +886,8 @@ header .offcanvas__toggler {
   }
 }
 @media screen and (max-width: 1399px) {
-  .brand_header nav .logo {
-    max-width: 5rem;
+  .brand_header nav .logo img {
+    height: 3rem;
   }
 }
 
@@ -1064,6 +1068,7 @@ footer .footer-bottom p {
 .latest-arrival, .life-styles {
   padding: 8rem 0;
   background-color: #f7f6f5;
+  overflow: hidden;
 }
 .latest-arrival .swiper, .life-styles .swiper {
   padding-left: var(--SliderNavPad);
@@ -1108,11 +1113,10 @@ footer .footer-bottom p {
   object-fit: cover;
 }
 
-.lifestyle-item {
-  z-index: 1;
+.lifestyle-category {
   position: relative;
 }
-.lifestyle-item .thumbnail {
+.lifestyle-category .thumbnail {
   margin-bottom: 3rem;
   overflow: hidden;
   transition: all 0.15s ease;
@@ -1121,16 +1125,16 @@ footer .footer-bottom p {
   align-items: center;
   justify-content: center;
 }
-.lifestyle-item .thumbnail img {
+.lifestyle-category .thumbnail img {
   transition: all 0.25s ease;
 }
-.lifestyle-item .caption {
+.lifestyle-category .caption {
   background-color: #000000;
   color: #FFFFFF;
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   margin: 0 2rem;
   position: absolute;
   bottom: -3rem;
@@ -1140,15 +1144,38 @@ footer .footer-bottom p {
   transition: all 0.25s ease;
 }
 @media screen and (min-width: 992px) {
-  .lifestyle-item .caption {
+  .lifestyle-category .caption {
     margin: 0 5rem;
   }
 }
-.lifestyle-item:hover .thumbnail img {
+.lifestyle-category:hover .thumbnail img {
   transform: scale(1.05);
 }
-.lifestyle-item:hover .caption {
+.lifestyle-category:hover .caption {
   background-color: #C89328;
+}
+.lifestyle-category .dropdown-menu {
+  inset: 0;
+  padding: 2rem 2rem;
+  border: 0;
+  box-shadow: 0 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 576px) {
+  .lifestyle-category .dropdown-menu {
+    inset: -2rem -4rem;
+  }
+}
+.lifestyle-category .dropdown-menu ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.lifestyle-category .dropdown-menu a {
+  font-weight: 500;
+  transition: all 0.1s ease;
+}
+.lifestyle-category .dropdown-menu a:hover {
+  color: #C89328;
 }
 
 .follow-us {
@@ -1276,6 +1303,7 @@ footer .footer-bottom p {
 .lifestyle_display {
   padding: 8rem 0;
   background-color: #F7F6F5;
+  overflow: hidden;
 }
 .lifestyle_display .row {
   --bs-gutter-x: 3rem;
@@ -1288,30 +1316,213 @@ footer .footer-bottom p {
     --bs-gutter-y: 6rem;
   }
 }
-.lifestyle_display .lifestyle-item .thumbnail {
+.lifestyle_display .lifestyle-category .thumbnail {
   border: 0.1rem solid #000000;
   height: 32rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.lifestyle_display .lifestyle-item .caption {
+.lifestyle_display .lifestyle-category .caption {
   border-radius: 0.8rem;
 }
 @media screen and (min-width: 992px) {
-  .lifestyle_display .lifestyle-item .caption {
+  .lifestyle_display .lifestyle-category .caption {
     margin: 0 4rem;
   }
 }
-.lifestyle_display .lifestyle-item:hover .thumbnail {
+.lifestyle_display .lifestyle-category:hover .thumbnail {
   border-color: #C89328;
 }
-.lifestyle_display .lifestyle-item .dropdown-menu {
-  transform: translate(0, 0) scale(1.2) !important;
+
+.lifestayle_hero {
+  background-size: cover;
+  background-position: center;
 }
-.lifestyle_display .lifestyle-item .dropdown-menu ul {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.lifestayle_hero .hero_container {
+  min-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .lifestayle_hero .hero_container {
+    min-height: 55rem;
+  }
+}
+.lifestayle_hero .header_top {
+  padding: 2rem 0;
+}
+.lifestayle_hero .header_top ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.lifestayle_hero .header_top ul li, .lifestayle_hero .header_top ul a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .lifestayle_hero .header_top ul li, .lifestayle_hero .header_top ul a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .lifestayle_hero .header_top ul li, .lifestayle_hero .header_top ul a {
+    font-size: 1.8rem;
+  }
+}
+.lifestayle_hero .header_top ul img {
+  max-width: 6rem;
+}
+@media screen and (min-width: 1200px) {
+  .lifestayle_hero .header_top ul img {
+    max-width: 100%;
+  }
+}
+
+.lifestyle-introduction {
+  padding: 6rem 0;
+}
+.lifestyle-introduction h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .lifestyle-introduction h2 {
+    font-size: 5.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lifestyle-introduction h2 {
+    font-size: 6.5rem;
+  }
+}
+.lifestyle-introduction h6 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .lifestyle-introduction h6 {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lifestyle-introduction h6 {
+    font-size: 3.6rem;
+  }
+}
+.lifestyle-introduction p {
+  margin: 5rem 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+@media screen and (min-width: 992px) {
+  .lifestyle-introduction p {
+    font-size: 2rem;
+  }
+}
+.lifestyle-introduction form select {
+  min-height: 4.8rem;
+  font-weight: 600;
+}
+.lifestyle-introduction form button {
+  padding: 2rem 4rem;
+  border: 0;
+  height: 4.8rem;
+  box-shadow: none;
+}
+
+.lifestyle__banner {
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 576px) {
+  .lifestyle__banner {
+    height: 35rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .lifestyle__banner {
+    height: 40rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .lifestyle__banner {
+    height: 50rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lifestyle__banner {
+    height: 60rem;
+  }
+}
+
+.lifestyle_item_wrapper {
+  padding: 8rem 0;
+  background-color: #f7f6f5;
+  overflow: hidden;
+}
+.lifestyle_item_wrapper .section__title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .lifestyle_item_wrapper .section__title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+}
+.lifestyle_item_wrapper .lifestyle-item .figure {
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+.lifestyle_item_wrapper .lifestyle-item .figure img {
+  transition: all 0.2s ease;
+}
+.lifestyle_item_wrapper .lifestyle-item .information {
+  margin-top: 2rem;
+}
+.lifestyle_item_wrapper .lifestyle-item .information .name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.lifestyle_item_wrapper .lifestyle-item .information .meta li {
+  margin: 0.5rem 0;
+}
+.lifestyle_item_wrapper .lifestyle-item:hover img {
+  transform: scaleX(-1);
+}
+
+.promo_info {
+  padding: 8rem 0;
+}
+.promo_info .row {
+  --bs-gutter-x: 5rem;
+  --bs-gutter-y: 3rem;
+}
+.promo_info .title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.promo_info .subtitle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+.promo_info .cover_image {
+  background-size: cover;
+  background-position: center;
+}
+.promo_info .cover_image img {
+  opacity: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1333,10 +1544,6 @@ footer .footer-bottom p {
   min-height: 4.6rem;
 }
 .filter_preowned_bikes select {
-  background-image: url(../img/down-arrow.svg);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: 98% 50%;
   font-weight: 500;
   min-height: 4.6rem;
 }

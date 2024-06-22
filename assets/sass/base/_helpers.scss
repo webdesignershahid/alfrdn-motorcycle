@@ -34,6 +34,10 @@ select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    background-image: url(../img/down-arrow.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
 }
 input:-webkit-autofill,
 textarea:-webkit-autofill,
